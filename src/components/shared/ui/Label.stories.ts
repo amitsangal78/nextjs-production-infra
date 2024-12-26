@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import Label from './Label';
+import Label, { Variant } from './Label';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -27,28 +27,28 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    variant: 'primary',
+    variant: Variant.Primary,
     children: 'Label',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    variant: 'secondary',
+    variant: Variant.Secondary,
     children: 'Label',
   },
 };
 
 export const Success: Story = {
   args: {
-    variant: 'success',
+    variant: Variant.Success,
     children: 'Label',
   },
 };
 
 export const Error: Story = {
   args: {
-    variant: 'error',
+    variant: Variant.Error,
     children: 'Label',
   },
 };

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { twMerge } from 'tailwind-merge';
 
-enum Variant {
+export enum Variant {
   Default = 'default',
   Primary = 'primary',
   Secondary = 'secondary',
