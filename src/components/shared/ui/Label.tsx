@@ -2,15 +2,18 @@ import React from 'react';
 
 import { twMerge } from 'tailwind-merge';
 
+enum Variant {
+  Default = 'default',
+  Primary = 'primary',
+  Secondary = 'secondary',
+  Success = 'success',
+  Error = 'error',
+  Warning = 'warning',
+}
+
 interface LabelProps {
   children: React.ReactNode;
-  variant?:
-    | 'default'
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'error'
-    | 'warning';
+  variant?: Variant;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   backgroundColor?: string;
@@ -23,7 +26,6 @@ const Label: React.FC<LabelProps> = ({
   size = 'md',
   className,
   backgroundColor = 'b',
-  onClick,
 }) => {
   const classes = twMerge(
     'text-sm font-medium',
